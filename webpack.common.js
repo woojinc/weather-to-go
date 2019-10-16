@@ -3,11 +3,12 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const outputDir = "./dist";
 
 module.exports = {
-    entry: path.resolve(__dirname, "src", "index.js"), //
+    entry: path.join(__dirname, './public/javascripts/index.js'), //
     output: {
-        path: path.join(__dirname, outputDir),
-        filename: "[name].js",
-        publicPath: "/dist/"
+        // path: path.join(__dirname, outputDir),
+        path: path.join(__dirname, './public'),
+        filename: "bundle.js",
+        // publicPath: "/dist/"
     },
     resolve: {
         extensions: [".js"] // if we were using React.js, we would include ".jsx"

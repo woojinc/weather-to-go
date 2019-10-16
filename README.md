@@ -25,15 +25,15 @@ The page consists of a single screen<sub>(a)</sub>, with tempearature, wind, and
 ## Implementation Timeline
   
 ### Day 1
-- [ ] Gather all the data from the World Bank (APIs)
-- [ ] Find a way to calculate/compile all the necessary weather data points
-- [ ] Render global map using `D3.js` 
+- [-] Gather all the API endpoints and data from the NOAA (APIs)
+- [-] Find a way to calculate/compile all the necessary weather data points
+- [-] Setup Node backedn for API calls
+
+### Day 2
+- [ ] Render 2D global map using `D3.js` 
 - [ ] Render temperature and precipitation chart
 - [ ] Render and gather temperature and precipitation settings
 - [ ] Render calendar
-
-
-### Day 2
 - [ ] Filter data based on the setting
 - [ ] Display the data onto the map
 - [ ] Display the data on the chart
@@ -49,4 +49,5 @@ The page consists of a single screen<sub>(a)</sub>, with tempearature, wind, and
 
 ### Bonus feature
 - [ ] Dark mode
+- [ ] 3D map
 - [ ] Switch between data based on historical average/forcasts
