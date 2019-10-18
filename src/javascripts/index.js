@@ -1,9 +1,8 @@
 import "../styles/index.scss";
-import {renderMap} from "./map";
+import { renderMap } from "./map";
+import { renderSlider } from "./slider";
 import axios from "axios";
 
 window.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("app").innerText = "Hello World!";
-    console.log(renderMap);
-    renderMap();
+    renderMap(10);
 });

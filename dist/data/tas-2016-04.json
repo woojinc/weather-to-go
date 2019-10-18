@@ -1,0 +1,1570 @@
+{
+  "004": {
+    "temperature": 57.2,
+    "year": 2016,
+    "month": 4,
+    "country": "Afghanistan",
+    "ISO3": "AFG",
+    "ISO3ID": "004"
+  },
+  "008": {
+    "temperature": 55.4,
+    "year": 2016,
+    "month": 4,
+    "country": "Albania",
+    "ISO3": "ALB",
+    "ISO3ID": "008"
+  },
+  "012": {
+    "temperature": 75.2,
+    "year": 2016,
+    "month": 4,
+    "country": "Algeria",
+    "ISO3": "DZA",
+    "ISO3ID": "012"
+  },
+  "020": {
+    "temperature": 48.2,
+    "year": 2016,
+    "month": 4,
+    "country": "Andorra",
+    "ISO3": "AND",
+    "ISO3ID": "020"
+  },
+  "024": {
+    "temperature": 71.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Angola",
+    "ISO3": "AGO",
+    "ISO3ID": "024"
+  },
+  "028": {
+    "temperature": 78.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Antigua and Barbuda",
+    "ISO3": "ATG",
+    "ISO3ID": "028"
+  },
+  "032": {
+    "temperature": 55.4,
+    "year": 2016,
+    "month": 4,
+    "country": "Argentina",
+    "ISO3": "ARG",
+    "ISO3ID": "032"
+  },
+  "051": {
+    "temperature": 48.2,
+    "year": 2016,
+    "month": 4,
+    "country": "Armenia",
+    "ISO3": "ARM",
+    "ISO3ID": "051"
+  },
+  "036": {
+    "temperature": 73.4,
+    "year": 2016,
+    "month": 4,
+    "country": "Australia",
+    "ISO3": "AUS",
+    "ISO3ID": "036"
+  },
+  "040": {
+    "temperature": 44.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Austria",
+    "ISO3": "AUT",
+    "ISO3ID": "040"
+  },
+  "031": {
+    "temperature": 53.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Azerbaijan",
+    "ISO3": "AZE",
+    "ISO3ID": "031"
+  },
+  "044": {
+    "temperature": 77.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Bahamas",
+    "ISO3": "BHS",
+    "ISO3ID": "044"
+  },
+  "048": {
+    "temperature": 80.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Bahrain",
+    "ISO3": "BHR",
+    "ISO3ID": "048"
+  },
+  "050": {
+    "temperature": 82.4,
+    "year": 2016,
+    "month": 4,
+    "country": "Bangladesh",
+    "ISO3": "BGD",
+    "ISO3ID": "050"
+  },
+  "052": {
+    "temperature": 80.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Barbados",
+    "ISO3": "BRB",
+    "ISO3ID": "052"
+  },
+  "112": {
+    "temperature": 48.2,
+    "year": 2016,
+    "month": 4,
+    "country": "Belarus",
+    "ISO3": "BLR",
+    "ISO3ID": "112"
+  },
+  "056": {
+    "temperature": 46.4,
+    "year": 2016,
+    "month": 4,
+    "country": "Belgium",
+    "ISO3": "BEL",
+    "ISO3ID": "056"
+  },
+  "084": {
+    "temperature": 80.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Belize",
+    "ISO3": "BLZ",
+    "ISO3ID": "084"
+  },
+  "204": {
+    "temperature": 87.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Benin",
+    "ISO3": "BEN",
+    "ISO3ID": "204"
+  },
+  "064": {
+    "temperature": 53.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Bhutan",
+    "ISO3": "BTN",
+    "ISO3ID": "064"
+  },
+  "068": {
+    "temperature": 69.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Bolivia",
+    "ISO3": "BOL",
+    "ISO3ID": "068"
+  },
+  "070": {
+    "temperature": 51.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Bosnia and Herzegovina",
+    "ISO3": "BIH",
+    "ISO3ID": "070"
+  },
+  "072": {
+    "temperature": 69.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Botswana",
+    "ISO3": "BWA",
+    "ISO3ID": "072"
+  },
+  "076": {
+    "temperature": 78.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Brazil",
+    "ISO3": "BRA",
+    "ISO3ID": "076"
+  },
+  "096": {
+    "temperature": 80.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Brunei",
+    "ISO3": "BRN",
+    "ISO3ID": "096"
+  },
+  "100": {
+    "temperature": 55.4,
+    "year": 2016,
+    "month": 4,
+    "country": "Bulgaria",
+    "ISO3": "BGR",
+    "ISO3ID": "100"
+  },
+  "854": {
+    "temperature": 91.4,
+    "year": 2016,
+    "month": 4,
+    "country": "Burkina Faso",
+    "ISO3": "BFA",
+    "ISO3ID": "854"
+  },
+  "108": {
+    "temperature": 68.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Burundi",
+    "ISO3": "BDI",
+    "ISO3ID": "108"
+  },
+  "116": {
+    "temperature": 87.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Cambodia",
+    "ISO3": "KHM",
+    "ISO3ID": "116"
+  },
+  "120": {
+    "temperature": 80.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Cameroon",
+    "ISO3": "CMR",
+    "ISO3ID": "120"
+  },
+  "124": {
+    "temperature": 15.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Canada",
+    "ISO3": "CAN",
+    "ISO3ID": "124"
+  },
+  "132": {
+    "temperature": 71.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Cape Verde",
+    "ISO3": "CPV",
+    "ISO3ID": "132"
+  },
+  "140": {
+    "temperature": 80.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Central African Republic",
+    "ISO3": "CAF",
+    "ISO3ID": "140"
+  },
+  "148": {
+    "temperature": 87.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Chad",
+    "ISO3": "TCD",
+    "ISO3ID": "148"
+  },
+  "152": {
+    "temperature": 44.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Chile",
+    "ISO3": "CHL",
+    "ISO3ID": "152"
+  },
+  "156": {
+    "temperature": 48.2,
+    "year": 2016,
+    "month": 4,
+    "country": "China",
+    "ISO3": "CHN",
+    "ISO3ID": "156"
+  },
+  "170": {
+    "temperature": 77.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Colombia",
+    "ISO3": "COL",
+    "ISO3ID": "170"
+  },
+  "174": {
+    "temperature": 78.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Comoros",
+    "ISO3": "COM",
+    "ISO3ID": "174"
+  },
+  "180": {
+    "temperature": 77.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Congo (Democratic Republic of the)",
+    "ISO3": "COD",
+    "ISO3ID": "180"
+  },
+  "178": {
+    "temperature": 78.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Congo (Republic of the)",
+    "ISO3": "COG",
+    "ISO3ID": "178"
+  },
+  "188": {
+    "temperature": 78.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Costa Rica",
+    "ISO3": "CRI",
+    "ISO3ID": "188"
+  },
+  "384": {
+    "temperature": 84.2,
+    "year": 2016,
+    "month": 4,
+    "country": "Cote d'Ivoire",
+    "ISO3": "CIV",
+    "ISO3ID": "384"
+  },
+  "191": {
+    "temperature": 53.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Croatia",
+    "ISO3": "HRV",
+    "ISO3ID": "191"
+  },
+  "192": {
+    "temperature": 77.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Cuba",
+    "ISO3": "CUB",
+    "ISO3ID": "192"
+  },
+  "196": {
+    "temperature": 66.2,
+    "year": 2016,
+    "month": 4,
+    "country": "Cyprus",
+    "ISO3": "CYP",
+    "ISO3ID": "196"
+  },
+  "203": {
+    "temperature": 46.4,
+    "year": 2016,
+    "month": 4,
+    "country": "Czech Republic",
+    "ISO3": "CZE",
+    "ISO3ID": "203"
+  },
+  "208": {
+    "temperature": 42.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Denmark",
+    "ISO3": "DNK",
+    "ISO3ID": "208"
+  },
+  "262": {
+    "temperature": 82.4,
+    "year": 2016,
+    "month": 4,
+    "country": "Djibouti",
+    "ISO3": "DJI",
+    "ISO3ID": "262"
+  },
+  "212": {
+    "temperature": 77.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Dominica",
+    "ISO3": "DMA",
+    "ISO3ID": "212"
+  },
+  "214": {
+    "temperature": 75.2,
+    "year": 2016,
+    "month": 4,
+    "country": "Dominican Republic",
+    "ISO3": "DOM",
+    "ISO3ID": "214"
+  },
+  "218": {
+    "temperature": 71.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Ecuador",
+    "ISO3": "ECU",
+    "ISO3ID": "218"
+  },
+  "818": {
+    "temperature": 75.2,
+    "year": 2016,
+    "month": 4,
+    "country": "Egypt",
+    "ISO3": "EGY",
+    "ISO3ID": "818"
+  },
+  "222": {
+    "temperature": 78.8,
+    "year": 2016,
+    "month": 4,
+    "country": "El Salvador",
+    "ISO3": "SLV",
+    "ISO3ID": "222"
+  },
+  "226": {
+    "temperature": 78.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Equatorial Guinea",
+    "ISO3": "GNQ",
+    "ISO3ID": "226"
+  },
+  "232": {
+    "temperature": 82.4,
+    "year": 2016,
+    "month": 4,
+    "country": "Eritrea",
+    "ISO3": "ERI",
+    "ISO3ID": "232"
+  },
+  "233": {
+    "temperature": 41.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Estonia",
+    "ISO3": "EST",
+    "ISO3ID": "233"
+  },
+  "231": {
+    "temperature": 77.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Ethiopia",
+    "ISO3": "ETH",
+    "ISO3ID": "231"
+  },
+  "234": {
+    "temperature": 39.2,
+    "year": 2016,
+    "month": 4,
+    "country": "Faroe Islands",
+    "ISO3": "FRO",
+    "ISO3ID": "234"
+  },
+  "583": {
+    "temperature": 82.4,
+    "year": 2016,
+    "month": 4,
+    "country": "Federated States of Micronesia",
+    "ISO3": "FSM",
+    "ISO3ID": "583"
+  },
+  "242": {
+    "temperature": 77.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Fiji",
+    "ISO3": "FJI",
+    "ISO3ID": "242"
+  },
+  "246": {
+    "temperature": 35.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Finland",
+    "ISO3": "FIN",
+    "ISO3ID": "246"
+  },
+  "250": {
+    "temperature": 48.2,
+    "year": 2016,
+    "month": 4,
+    "country": "France",
+    "ISO3": "FRA",
+    "ISO3ID": "250"
+  },
+  "266": {
+    "temperature": 78.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Gabon",
+    "ISO3": "GAB",
+    "ISO3ID": "266"
+  },
+  "270": {
+    "temperature": 86.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Gambia",
+    "ISO3": "GMB",
+    "ISO3ID": "270"
+  },
+  "268": {
+    "temperature": 46.4,
+    "year": 2016,
+    "month": 4,
+    "country": "Georgia",
+    "ISO3": "GEO",
+    "ISO3ID": "268"
+  },
+  "276": {
+    "temperature": 46.4,
+    "year": 2016,
+    "month": 4,
+    "country": "Germany",
+    "ISO3": "DEU",
+    "ISO3ID": "276"
+  },
+  "288": {
+    "temperature": 86.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Ghana",
+    "ISO3": "GHA",
+    "ISO3ID": "288"
+  },
+  "300": {
+    "temperature": 59.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Greece",
+    "ISO3": "GRC",
+    "ISO3ID": "300"
+  },
+  "304": {
+    "temperature": -4.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Greenland",
+    "ISO3": "GRL",
+    "ISO3ID": "304"
+  },
+  "308": {
+    "temperature": 80.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Grenada",
+    "ISO3": "GRD",
+    "ISO3ID": "308"
+  },
+  "320": {
+    "temperature": 78.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Guatemala",
+    "ISO3": "GTM",
+    "ISO3ID": "320"
+  },
+  "324": {
+    "temperature": 84.2,
+    "year": 2016,
+    "month": 4,
+    "country": "Guinea",
+    "ISO3": "GIN",
+    "ISO3ID": "324"
+  },
+  "624": {
+    "temperature": 86.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Guinea-Bissau",
+    "ISO3": "GNB",
+    "ISO3ID": "624"
+  },
+  "328": {
+    "temperature": 78.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Guyana",
+    "ISO3": "GUY",
+    "ISO3ID": "328"
+  },
+  "332": {
+    "temperature": 77.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Haiti",
+    "ISO3": "HTI",
+    "ISO3ID": "332"
+  },
+  "340": {
+    "temperature": 77.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Honduras",
+    "ISO3": "HND",
+    "ISO3ID": "340"
+  },
+  "348": {
+    "temperature": 53.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Hungary",
+    "ISO3": "HUN",
+    "ISO3ID": "348"
+  },
+  "352": {
+    "temperature": 32.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Iceland",
+    "ISO3": "ISL",
+    "ISO3ID": "352"
+  },
+  "356": {
+    "temperature": 84.2,
+    "year": 2016,
+    "month": 4,
+    "country": "India",
+    "ISO3": "IND",
+    "ISO3ID": "356"
+  },
+  "360": {
+    "temperature": 80.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Indonesia",
+    "ISO3": "IDN",
+    "ISO3ID": "360"
+  },
+  "364": {
+    "temperature": 62.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Iran",
+    "ISO3": "IRN",
+    "ISO3ID": "364"
+  },
+  "368": {
+    "temperature": 71.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Iraq",
+    "ISO3": "IRQ",
+    "ISO3ID": "368"
+  },
+  "372": {
+    "temperature": 44.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Ireland",
+    "ISO3": "IRL",
+    "ISO3ID": "372"
+  },
+  "376": {
+    "temperature": 69.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Israel",
+    "ISO3": "ISR",
+    "ISO3ID": "376"
+  },
+  "380": {
+    "temperature": 53.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Italy",
+    "ISO3": "ITA",
+    "ISO3ID": "380"
+  },
+  "388": {
+    "temperature": 77.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Jamaica",
+    "ISO3": "JAM",
+    "ISO3ID": "388"
+  },
+  "392": {
+    "temperature": 50.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Japan",
+    "ISO3": "JPN",
+    "ISO3ID": "392"
+  },
+  "400": {
+    "temperature": 68.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Jordan",
+    "ISO3": "JOR",
+    "ISO3ID": "400"
+  },
+  "398": {
+    "temperature": 51.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Kazakhstan",
+    "ISO3": "KAZ",
+    "ISO3ID": "398"
+  },
+  "404": {
+    "temperature": 78.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Kenya",
+    "ISO3": "KEN",
+    "ISO3ID": "404"
+  },
+  "296": {
+    "temperature": 80.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Kiribati",
+    "ISO3": "KIR",
+    "ISO3ID": "296"
+  },
+  "408": {
+    "temperature": 46.4,
+    "year": 2016,
+    "month": 4,
+    "country": "Korea",
+    "ISO3": "PRK",
+    "ISO3ID": "408"
+  },
+  "410": {
+    "temperature": 53.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Korea",
+    "ISO3": "KOR",
+    "ISO3ID": "410"
+  },
+  "414": {
+    "temperature": 77.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Kuwait",
+    "ISO3": "KWT",
+    "ISO3ID": "414"
+  },
+  "417": {
+    "temperature": 41.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Kyrgyzstan",
+    "ISO3": "KGZ",
+    "ISO3ID": "417"
+  },
+  "418": {
+    "temperature": 80.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Laos",
+    "ISO3": "LAO",
+    "ISO3ID": "418"
+  },
+  "428": {
+    "temperature": 42.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Latvia",
+    "ISO3": "LVA",
+    "ISO3ID": "428"
+  },
+  "422": {
+    "temperature": 62.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Lebanon",
+    "ISO3": "LBN",
+    "ISO3ID": "422"
+  },
+  "426": {
+    "temperature": 57.2,
+    "year": 2016,
+    "month": 4,
+    "country": "Lesotho",
+    "ISO3": "LSO",
+    "ISO3ID": "426"
+  },
+  "430": {
+    "temperature": 80.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Liberia",
+    "ISO3": "LBR",
+    "ISO3ID": "430"
+  },
+  "434": {
+    "temperature": 75.2,
+    "year": 2016,
+    "month": 4,
+    "country": "Libya",
+    "ISO3": "LBY",
+    "ISO3ID": "434"
+  },
+  "438": {
+    "temperature": 35.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Liechtenstein",
+    "ISO3": "LIE",
+    "ISO3ID": "438"
+  },
+  "440": {
+    "temperature": 44.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Lithuania",
+    "ISO3": "LTU",
+    "ISO3ID": "440"
+  },
+  "442": {
+    "temperature": 46.4,
+    "year": 2016,
+    "month": 4,
+    "country": "Luxembourg",
+    "ISO3": "LUX",
+    "ISO3ID": "442"
+  },
+  "807": {
+    "temperature": 53.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Macedonia",
+    "ISO3": "MKD",
+    "ISO3ID": "807"
+  },
+  "450": {
+    "temperature": 75.2,
+    "year": 2016,
+    "month": 4,
+    "country": "Madagascar",
+    "ISO3": "MDG",
+    "ISO3ID": "450"
+  },
+  "454": {
+    "temperature": 71.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Malawi",
+    "ISO3": "MWI",
+    "ISO3ID": "454"
+  },
+  "458": {
+    "temperature": 80.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Malaysia",
+    "ISO3": "MYS",
+    "ISO3ID": "458"
+  },
+  "462": {
+    "temperature": 86.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Maldives",
+    "ISO3": "MDV",
+    "ISO3ID": "462"
+  },
+  "466": {
+    "temperature": 89.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Mali",
+    "ISO3": "MLI",
+    "ISO3ID": "466"
+  },
+  "470": {
+    "temperature": 64.4,
+    "year": 2016,
+    "month": 4,
+    "country": "Malta",
+    "ISO3": "MLT",
+    "ISO3ID": "470"
+  },
+  "584": {
+    "temperature": 84.2,
+    "year": 2016,
+    "month": 4,
+    "country": "Marshall Islands",
+    "ISO3": "MHL",
+    "ISO3ID": "584"
+  },
+  "478": {
+    "temperature": 86.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Mauritania",
+    "ISO3": "MRT",
+    "ISO3ID": "478"
+  },
+  "480": {
+    "temperature": 77.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Mauritius",
+    "ISO3": "MUS",
+    "ISO3ID": "480"
+  },
+  "484": {
+    "temperature": 71.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Mexico",
+    "ISO3": "MEX",
+    "ISO3ID": "484"
+  },
+  "498": {
+    "temperature": 55.4,
+    "year": 2016,
+    "month": 4,
+    "country": "Moldova",
+    "ISO3": "MDA",
+    "ISO3ID": "498"
+  },
+  "492": {
+    "temperature": 48.2,
+    "year": 2016,
+    "month": 4,
+    "country": "Monaco",
+    "ISO3": "MCO",
+    "ISO3ID": "492"
+  },
+  "496": {
+    "temperature": 39.2,
+    "year": 2016,
+    "month": 4,
+    "country": "Mongolia",
+    "ISO3": "MNG",
+    "ISO3ID": "496"
+  },
+  "504": {
+    "temperature": 60.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Morocco",
+    "ISO3": "MAR",
+    "ISO3ID": "504"
+  },
+  "508": {
+    "temperature": 75.2,
+    "year": 2016,
+    "month": 4,
+    "country": "Mozambique",
+    "ISO3": "MOZ",
+    "ISO3ID": "508"
+  },
+  "104": {
+    "temperature": 78.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Myanmar (Burma)",
+    "ISO3": "MMR",
+    "ISO3ID": "104"
+  },
+  "516": {
+    "temperature": 68.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Namibia",
+    "ISO3": "NAM",
+    "ISO3ID": "516"
+  },
+  "524": {
+    "temperature": 59.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Nepal",
+    "ISO3": "NPL",
+    "ISO3ID": "524"
+  },
+  "528": {
+    "temperature": 46.4,
+    "year": 2016,
+    "month": 4,
+    "country": "Netherlands",
+    "ISO3": "NLD",
+    "ISO3ID": "528"
+  },
+  "540": {
+    "temperature": 75.2,
+    "year": 2016,
+    "month": 4,
+    "country": "New Caledonia",
+    "ISO3": "NCL",
+    "ISO3ID": "540"
+  },
+  "554": {
+    "temperature": 51.8,
+    "year": 2016,
+    "month": 4,
+    "country": "New Zealand",
+    "ISO3": "NZL",
+    "ISO3ID": "554"
+  },
+  "558": {
+    "temperature": 78.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Nicaragua",
+    "ISO3": "NIC",
+    "ISO3ID": "558"
+  },
+  "562": {
+    "temperature": 89.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Niger",
+    "ISO3": "NER",
+    "ISO3ID": "562"
+  },
+  "566": {
+    "temperature": 87.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Nigeria",
+    "ISO3": "NGA",
+    "ISO3ID": "566"
+  },
+  "580": {
+    "temperature": 82.4,
+    "year": 2016,
+    "month": 4,
+    "country": "Northern Mariana Islands",
+    "ISO3": "MNP",
+    "ISO3ID": "580"
+  },
+  "578": {
+    "temperature": 32.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Norway",
+    "ISO3": "NOR",
+    "ISO3ID": "578"
+  },
+  "512": {
+    "temperature": 80.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Oman",
+    "ISO3": "OMN",
+    "ISO3ID": "512"
+  },
+  "586": {
+    "temperature": 73.4,
+    "year": 2016,
+    "month": 4,
+    "country": "Pakistan",
+    "ISO3": "PAK",
+    "ISO3ID": "586"
+  },
+  "585": {
+    "temperature": 82.4,
+    "year": 2016,
+    "month": 4,
+    "country": "Palau",
+    "ISO3": "PLW",
+    "ISO3ID": "585"
+  },
+  "591": {
+    "temperature": 80.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Panama",
+    "ISO3": "PAN",
+    "ISO3ID": "591"
+  },
+  "598": {
+    "temperature": 77.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Papua New Guinea",
+    "ISO3": "PNG",
+    "ISO3ID": "598"
+  },
+  "600": {
+    "temperature": 75.2,
+    "year": 2016,
+    "month": 4,
+    "country": "Paraguay",
+    "ISO3": "PRY",
+    "ISO3ID": "600"
+  },
+  "604": {
+    "temperature": 68.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Peru",
+    "ISO3": "PER",
+    "ISO3ID": "604"
+  },
+  "608": {
+    "temperature": 80.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Philippines",
+    "ISO3": "PHL",
+    "ISO3ID": "608"
+  },
+  "616": {
+    "temperature": 46.4,
+    "year": 2016,
+    "month": 4,
+    "country": "Poland",
+    "ISO3": "POL",
+    "ISO3ID": "616"
+  },
+  "620": {
+    "temperature": 53.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Portugal",
+    "ISO3": "PRT",
+    "ISO3ID": "620"
+  },
+  "630": {
+    "temperature": 77.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Puerto Rico",
+    "ISO3": "PRI",
+    "ISO3ID": "630"
+  },
+  "634": {
+    "temperature": 80.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Qatar",
+    "ISO3": "QAT",
+    "ISO3ID": "634"
+  },
+  "499": {
+    "temperature": 50.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Republic of Montenegro",
+    "ISO3": "MNE",
+    "ISO3ID": "499"
+  },
+  "688": {
+    "temperature": 55.4,
+    "year": 2016,
+    "month": 4,
+    "country": "Republic of Serbia",
+    "ISO3": "SRB",
+    "ISO3ID": "688"
+  },
+  "642": {
+    "temperature": 53.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Romania",
+    "ISO3": "ROU",
+    "ISO3ID": "642"
+  },
+  "643": {
+    "temperature": 26.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Russia",
+    "ISO3": "RUS",
+    "ISO3ID": "643"
+  },
+  "646": {
+    "temperature": 68.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Rwanda",
+    "ISO3": "RWA",
+    "ISO3ID": "646"
+  },
+  "882": {
+    "temperature": 80.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Samoa",
+    "ISO3": "WSM",
+    "ISO3ID": "882"
+  },
+  "678": {
+    "temperature": 77.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Sao Tome and Principe",
+    "ISO3": "STP",
+    "ISO3ID": "678"
+  },
+  "682": {
+    "temperature": 77.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Saudi Arabia",
+    "ISO3": "SAU",
+    "ISO3ID": "682"
+  },
+  "686": {
+    "temperature": 87.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Senegal",
+    "ISO3": "SEN",
+    "ISO3ID": "686"
+  },
+  "690": {
+    "temperature": 84.2,
+    "year": 2016,
+    "month": 4,
+    "country": "Seychelles",
+    "ISO3": "SYC",
+    "ISO3ID": "690"
+  },
+  "694": {
+    "temperature": 82.4,
+    "year": 2016,
+    "month": 4,
+    "country": "Sierra Leone",
+    "ISO3": "SLE",
+    "ISO3ID": "694"
+  },
+  "702": {
+    "temperature": 82.4,
+    "year": 2016,
+    "month": 4,
+    "country": "Singapore",
+    "ISO3": "SGP",
+    "ISO3ID": "702"
+  },
+  "703": {
+    "temperature": 48.2,
+    "year": 2016,
+    "month": 4,
+    "country": "Slovakia",
+    "ISO3": "SVK",
+    "ISO3ID": "703"
+  },
+  "705": {
+    "temperature": 50.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Slovenia",
+    "ISO3": "SVN",
+    "ISO3ID": "705"
+  },
+  "090": {
+    "temperature": 77.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Solomon Islands",
+    "ISO3": "SLB",
+    "ISO3ID": "090"
+  },
+  "706": {
+    "temperature": 84.2,
+    "year": 2016,
+    "month": 4,
+    "country": "Somalia",
+    "ISO3": "SOM",
+    "ISO3ID": "706"
+  },
+  "710": {
+    "temperature": 66.2,
+    "year": 2016,
+    "month": 4,
+    "country": "South Africa",
+    "ISO3": "ZAF",
+    "ISO3ID": "710"
+  },
+  "728": {
+    "temperature": 86.0,
+    "year": 2016,
+    "month": 4,
+    "country": "South Sudan",
+    "ISO3": "SSD",
+    "ISO3ID": "728"
+  },
+  "724": {
+    "temperature": 51.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Spain",
+    "ISO3": "ESP",
+    "ISO3ID": "724"
+  },
+  "144": {
+    "temperature": 84.2,
+    "year": 2016,
+    "month": 4,
+    "country": "Sri Lanka",
+    "ISO3": "LKA",
+    "ISO3ID": "144"
+  },
+  "659": {
+    "temperature": 77.0,
+    "year": 2016,
+    "month": 4,
+    "country": "St. Kitts and Nevis",
+    "ISO3": "KNA",
+    "ISO3ID": "659"
+  },
+  "662": {
+    "temperature": 78.8,
+    "year": 2016,
+    "month": 4,
+    "country": "St. Lucia",
+    "ISO3": "LCA",
+    "ISO3ID": "662"
+  },
+  "670": {
+    "temperature": 80.6,
+    "year": 2016,
+    "month": 4,
+    "country": "St. Vincent and the Grenadines",
+    "ISO3": "VCT",
+    "ISO3ID": "670"
+  },
+  "729": {
+    "temperature": 86.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Sudan",
+    "ISO3": "SDN",
+    "ISO3ID": "729"
+  },
+  "740": {
+    "temperature": 78.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Suriname",
+    "ISO3": "SUR",
+    "ISO3ID": "740"
+  },
+  "748": {
+    "temperature": 69.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Swaziland",
+    "ISO3": "SWZ",
+    "ISO3ID": "748"
+  },
+  "752": {
+    "temperature": 33.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Sweden",
+    "ISO3": "SWE",
+    "ISO3ID": "752"
+  },
+  "756": {
+    "temperature": 41.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Switzerland",
+    "ISO3": "CHE",
+    "ISO3ID": "756"
+  },
+  "760": {
+    "temperature": 66.2,
+    "year": 2016,
+    "month": 4,
+    "country": "Syria",
+    "ISO3": "SYR",
+    "ISO3ID": "760"
+  },
+  "762": {
+    "temperature": 39.2,
+    "year": 2016,
+    "month": 4,
+    "country": "Tajikistan",
+    "ISO3": "TJK",
+    "ISO3ID": "762"
+  },
+  "834": {
+    "temperature": 73.4,
+    "year": 2016,
+    "month": 4,
+    "country": "Tanzania",
+    "ISO3": "TZA",
+    "ISO3ID": "834"
+  },
+  "764": {
+    "temperature": 87.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Thailand",
+    "ISO3": "THA",
+    "ISO3ID": "764"
+  },
+  "626": {
+    "temperature": 80.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Timor Leste",
+    "ISO3": "TLS",
+    "ISO3ID": "626"
+  },
+  "768": {
+    "temperature": 86.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Togo",
+    "ISO3": "TGO",
+    "ISO3ID": "768"
+  },
+  "776": {
+    "temperature": 77.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Tonga",
+    "ISO3": "TON",
+    "ISO3ID": "776"
+  },
+  "780": {
+    "temperature": 80.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Trinidad and Tobago",
+    "ISO3": "TTO",
+    "ISO3ID": "780"
+  },
+  "788": {
+    "temperature": 68.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Tunisia",
+    "ISO3": "TUN",
+    "ISO3ID": "788"
+  },
+  "792": {
+    "temperature": 55.4,
+    "year": 2016,
+    "month": 4,
+    "country": "Turkey",
+    "ISO3": "TUR",
+    "ISO3ID": "792"
+  },
+  "795": {
+    "temperature": 60.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Turkmenistan",
+    "ISO3": "TKM",
+    "ISO3ID": "795"
+  },
+  "798": {
+    "temperature": 82.4,
+    "year": 2016,
+    "month": 4,
+    "country": "Tuvalu",
+    "ISO3": "TUV",
+    "ISO3ID": "798"
+  },
+  "800": {
+    "temperature": 75.2,
+    "year": 2016,
+    "month": 4,
+    "country": "Uganda",
+    "ISO3": "UGA",
+    "ISO3ID": "800"
+  },
+  "804": {
+    "temperature": 51.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Ukraine",
+    "ISO3": "UKR",
+    "ISO3ID": "804"
+  },
+  "784": {
+    "temperature": 80.6,
+    "year": 2016,
+    "month": 4,
+    "country": "United Arab Emirates",
+    "ISO3": "ARE",
+    "ISO3ID": "784"
+  },
+  "826": {
+    "temperature": 42.8,
+    "year": 2016,
+    "month": 4,
+    "country": "United Kingdom",
+    "ISO3": "GBR",
+    "ISO3ID": "826"
+  },
+  "840": {
+    "temperature": 46.4,
+    "year": 2016,
+    "month": 4,
+    "country": "United States",
+    "ISO3": "USA",
+    "ISO3ID": "840"
+  },
+  "858": {
+    "temperature": 64.4,
+    "year": 2016,
+    "month": 4,
+    "country": "Uruguay",
+    "ISO3": "URY",
+    "ISO3ID": "858"
+  },
+  "860": {
+    "temperature": 59.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Uzbekistan",
+    "ISO3": "UZB",
+    "ISO3ID": "860"
+  },
+  "548": {
+    "temperature": 77.0,
+    "year": 2016,
+    "month": 4,
+    "country": "Vanuatu",
+    "ISO3": "VUT",
+    "ISO3ID": "548"
+  },
+  "862": {
+    "temperature": 80.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Venezuela",
+    "ISO3": "VEN",
+    "ISO3ID": "862"
+  },
+  "704": {
+    "temperature": 80.6,
+    "year": 2016,
+    "month": 4,
+    "country": "Vietnam",
+    "ISO3": "VNM",
+    "ISO3ID": "704"
+  },
+  "887": {
+    "temperature": 75.2,
+    "year": 2016,
+    "month": 4,
+    "country": "Yemen",
+    "ISO3": "YEM",
+    "ISO3ID": "887"
+  },
+  "894": {
+    "temperature": 69.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Zambia",
+    "ISO3": "ZMB",
+    "ISO3ID": "894"
+  },
+  "716": {
+    "temperature": 69.8,
+    "year": 2016,
+    "month": 4,
+    "country": "Zimbabwe",
+    "ISO3": "ZWE",
+    "ISO3ID": "716"
+  }
+}
