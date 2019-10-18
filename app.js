@@ -1,10 +1,10 @@
-// import { noaaAuthToken } from './auth_token';
+
 const express = require('express');
 const app = express();
 const path = require('path');
 const fetch = require('node-fetch');
 const PORT = process.env.PORT || 8080; // process.env accesses heroku's environment variables
-const token = require('./auth_token.js');
+const SECRETKEY = process.env.SECRETKEY || require("./auth_token.js");
 
 app.use(express.static('dist'))
 
