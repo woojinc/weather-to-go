@@ -25,9 +25,9 @@ The page consists of a single screen<sub>(a)</sub>, with tempearature, wind, and
 ## Implementation Timeline
   
 ### Day 1
-- [-] Gather all the API endpoints and data from the NOAA (APIs)
-- [-] Find a way to calculate/compile all the necessary weather data points
-- [-] Setup Node backedn for API calls
+- [x] Gather all the API endpoints and data from the NOAA (APIs)
+- [x] Find a way to calculate/compile all the necessary weather data points
+- [x] Setup Node backedn for API calls
 
 ### Day 2
 - [ ] Render 2D global map using `D3.js` 

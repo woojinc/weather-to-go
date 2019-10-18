@@ -4,5 +4,6 @@ bundle.js.map
 auth_token.js
 
 main.js
+main.js.map
 
 /node_modules/
