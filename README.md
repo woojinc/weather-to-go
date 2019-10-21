@@ -30,17 +30,15 @@ The page consists of a single screen<sub>(a)</sub>, with tempearature, wind, and
 - [x] Setup Node backedn for API calls
 
 ### Day 2
-- [ ] Render 2D global map using `D3.js` 
-- [ ] Render temperature and precipitation chart
-- [ ] Render and gather temperature and precipitation settings
-- [ ] Render calendar
-- [ ] Filter data based on the setting
-- [ ] Display the data onto the map
+- [x] Render 2D global map using `D3.js` 
+- [x] Filter data based on the setting
+- [x] Display the data onto the map
 - [ ] Display the data on the chart
+- [ ] Render and gather temperature settings
 
 ### Day 3
-- [ ] Make the map interactive and allow a user to select a country without setting the temperature and precipitation settings
-- [ ] Show temperature and precipitation data also on the calendar
+- [x] Make the map interactive and allow a user to select a country without setting the temperature settings
+- [ ] Show temperature data also on the calendar
 
 ### Day 4
 - [ ] Add all the links and styling
@@ -48,6 +46,7 @@ The page consists of a single screen<sub>(a)</sub>, with tempearature, wind, and
 
 
 ### Bonus feature
+- [ ] Add precipitation
 - [ ] Dark mode
 - [ ] 3D map
 - [ ] Switch between data based on historical average/forcasts
