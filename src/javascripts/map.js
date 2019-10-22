@@ -1,18 +1,30 @@
-import { 
+import {
     renderSlider,
     numMonthToName
 } from "./slider";
+
+// import {
+//     onZoom,
+//     clicked
+// } from "./event_handling";
+
 import { renderSelectedCountry } from "./selected-map";
 
 export const renderMap = (month) => {
 
-    const color = d3.scaleQuantize()
-        .domain([45, 90])
-        .range(["#3288BD80", "#66C2A580", "#ABDDA480", "#E6F59880",
-            "#FFFFBF80", "#FEE08B80", "#FDAE6180", "#F46D4380", "#D53E4F80", "#9E014280"]);
+    const color = d3.scaleLinear()
+        .domain([20, 40, 50, 65, 75, 85, 90, 100])
+        .range(["#fffafa",
+            "#00a6ca",
+            "#00ccbc",
+            "#90eb9d",
+            "#ffff8c",
+            "#f9d057",
+            "#f29e2e",
+            "#d7191c"]);
 
     const temperatureColor = (id, countryTemperature) => {
-        
+
         if (countryTemperature[id] !== undefined) {
             const jsonCountryTemperature = countryTemperature[id].temperature;
             return color(jsonCountryTemperature)
@@ -21,7 +33,8 @@ export const renderMap = (month) => {
         }
     }
 
-    let width = 500, height = 500, center = [-width / 2 + 3, 0], sens = 0.25, centered, timer;
+    let width = 500, height = 500, center = [-width / 2 + 3, 0], sens = 0.25,
+        zoom, centeredFeature, timer;
 
     const globeConfig = {
         speed: 0.005,
@@ -29,37 +42,41 @@ export const renderMap = (month) => {
         horizontalTilt: 0
     }
 
-    // let projection = d3.geoMercator()
-    //     .center([90, 0])
-    //     .scale(100)
-    //     .rotate([0, 0]);
-
     let svg = d3.select("#map")
         .append("svg")
         .attr("width", width)
         .attr("height", height)
 
+    svg.append("path")
+        .datum({ type: "Sphere" })
+        .attr("class", "water")
+        .attr("d", path)
+
+
+    drawGraticule();
+
     let g = svg.append('g');
+
+    
     let projection = d3.geoOrthographic()
-        .center(center)
-        // .scale(200);
+        // .center(center);
+        .translate([width / 2, height / 2])
+    // .scale(200);
     const initialScale = projection.scale();
     const initialCenter = projection.center();
     console.log(initialScale);
     console.log(initialCenter);
 
-
     let path = d3.geoPath().projection(projection);
 
-    enableRotation();
     
-    // drawGraticule();
+
+
     queue()
         .defer(d3.json, "./data/world-110m2.json")
         .defer(d3.json, `./data/tas-2016-${month}.json`)
         .await(renderGlobalMap);
-    // enableRotation();
-    
+
     function renderGlobalMap(error, topology, temperature) {
         if (error) throw error;
 
@@ -73,7 +90,7 @@ export const renderMap = (month) => {
             .attr("height", 10)
             .attr("y", (d, i) => 10 + i * 9)
             .attr("width", 10)
-            .attr("fill", d => color(100 - d*10))
+            .attr("fill", d => color(100 - d * 10))
             .attr("stroke", "gray");
 
         const geojson = topojson.feature(topology, topology.objects.countries);
@@ -87,54 +104,98 @@ export const renderMap = (month) => {
                 return temperatureColor(d.id, temperature);
             })
             .style("stroke", "#eee")
+            .on("click", function (selectedFeature) {
+                timer.stop();
+                clicked(selectedFeature);
+                renderSelectedCountry("update",
+                    selectedFeature,
+                    temperatureColor(selectedFeature.id, temperature));
+            })
             .call(d3.drag()
-                .subject(function () { 
-                    const r = projection.rotate(); 
-                    return { 
-                        x: r[0] / sens, y: -r[1] / sens 
-                        // x: 0, y: 0
-                    }; 
+                .subject(function () {
+                    const r = projection.rotate();
+                    return {
+                        x: r[0] / sens, y: -r[1] / sens
+                    };
                 })
                 .on("drag", function () {
                     timer.stop();
                     const rotate = projection.rotate();
-                    // console.log(d3.event.x);
                     projection.rotate([d3.event.x * sens, -d3.event.y * sens, rotate[2]]);
                     svg.selectAll("path").attr("d", path);
-                    // svg.selectAll(".focused").classed("focused", focused = false);
-                }))
-            .on("click", function (d) {
-                clicked(d);
-                renderSelectedCountry("update", d, temperatureColor(d.id, temperature));
-            });
+                }));;
 
-        
+        g.selectAll("text")
+            .data()
 
-        // enableRotation();
+        const onZoom = () => {
+            zoom.scaleExtent([zoom.scale() * 0.9, zoom.scale() * 1.1]);
+            scale = (d3.event.scale >= 1) ? d3.event.scale : 1;
+            projection.scale(300 * scale);
+            // moved = true;
+            dragging = true;
+        }
+        // 3D
+        const clicked = (selectedFeature) => {
 
-        function clicked(d) {
-            let x = 0, y = 0;
+            let centroid, inverted, rotate, currentRotate, desiredRotate, r, currentScale, desiredScale, s;
 
-            // If the click was on the centered state or the background, re-center.
-            // Otherwise, center the clicked-on state.
-            if (!d || centered === d) {
-                centered = null;
+            //     // If the click was on the centered state or the background, re-center.
+            //     // Otherwise, center the clicked-on state.
+            if (!selectedFeature || centeredFeature === selectedFeature) {
+                centeredFeature = null;
+                centroid = path.centroid(selectedFeature);
+                inverted = projection.invert([centroid[0], centroid[1]]);
+                currentRotate = projection.rotate();
+
+                currentScale = projection.scale();
+
+                r = d3.interpolate(currentRotate, [currentRotate[0], globeConfig.verticalTilt, globeConfig.horizontalTilt]);
+                s = d3.interpolate(currentScale, initialScale);
+
             } else {
-                let centroid = path.centroid(d);
-                x = width / 2 - centroid[0];
-                y = height / 2 - centroid[1];
-                centered = d;
-            }
+                centroid = path.centroid(selectedFeature);
+                inverted = projection.invert([centroid[0], centroid[1]]);
+                currentRotate = projection.rotate();
 
-            // Transition to the new transform.
+                currentScale = projection.scale();
+                // projection.fitSize([width, height], selectedFeature);
+                console.log("current center", projection.center());
+                console.log("initial center", initialCenter);
+                desiredScale = projection.scale();
+
+                r = d3.interpolate(currentRotate, [-inverted[0], -inverted[1]]);
+                s = d3.interpolate(currentScale, 200);
+                centeredFeature = selectedFeature;
+            }
             g.transition()
                 .duration(750)
-                .attr("transform", "translate(" + x + "," + y + ")");
-        }
+                .tween("rotate", function () {
+                    return function (t) {
+                        projection.rotate(r(t));
+                        // projection.scale(s(t));
+                        // projection.center([(center[0] / s(t)), 0]);
+                        svg.selectAll("path").attr("d", path);
+                        console.log("Rotate!");
+                    }
+                })
+                .on("end", function () {
+                    if (!centeredFeature) {
+                        enableRotation(currentRotate[0])
+                    }
+                });
+
+            const initialScale = projection.scale();
+
+            // Transition to the new transform.
+
+        };
+
+        enableRotation();
 
         renderSlider();
         renderSelectedCountry(
-            "create", 
+            "create",
             geojson.features[0], color(temperature[geojson.features[0].id].temperature)
         );
 
@@ -146,12 +207,12 @@ export const renderMap = (month) => {
                 let currentMonthString = e.target.value;
 
                 sliderLabel.innerHTML = numMonthToName[currentMonth];
-                
+
                 if (currentMonthString.length === 1) {
                     currentMonthString = "0" + currentMonthString;
                 }
 
-                d3.json(`./data/tas-2016-${currentMonthString}.json`, function(error, temperature) {
+                d3.json(`./data/tas-2016-${currentMonthString}.json`, function (error, temperature) {
                     if (error) throw error;
                     g.selectAll("path")
                         .style("fill", function (d) {
@@ -170,32 +231,52 @@ export const renderMap = (month) => {
             });
 
         // zoom and pan
-        const zoom = d3.zoom()
-            .on('zoom', () => {
-                g.style('stroke-width', `${1.5 / d3.event.transform.k}px`)
-                g.attr('transform', d3.event.traform)
-            })
+        // const zoom = d3.zoom()
+        //     .on('zoom', () => {
+        //         g.style('stroke-width', `${1.5 / d3.event.transform.k}px`)
 
-        svg.call(zoom);
+        //         svg.attr('transform', function(d) {
+        //             return 'transform(' + d3.event.transform.k + ',0,0)';
+        //         })
+        //         console.log(d3.event.transform);
+        //         console.log({ k: d3.event.transform.k, x: 0, y: 0 });
+        //         // projection.translate(d3.event.transform.k).scale(d3.event.scale);
+        //         svg.selectAll("path").attr("d", path);
+                
+        //     })
+
+        // svg.call(zoom);
+
+
+
+        // zoom = d3.zoom()
+        //     .center([width / 2, height / 2])
+        //     .on("zoom", onZoom)
+        //     .on("zoomend", function () { dragging = false; });
+
+        // drag = d3.drag()
+        //     .on('drag', onDrag)
+        //     .on('dragend', function () { dragging = false; })
+
+        // canvas.call(zoom);
+        // canvas.call(drag);
     }
 
-    function enableRotation() {
+    function enableRotation(startingAngle = 300) {
         timer = d3.timer(function (elapsed) {
-            projection.rotate([globeConfig.speed * elapsed - 120, globeConfig.verticalTilt, globeConfig.horizontalTilt]);
+            projection.rotate([startingAngle + globeConfig.speed * elapsed, globeConfig.verticalTilt, globeConfig.horizontalTilt]);
             // projection.rotate([90,0,0]);
             svg.selectAll("path").attr("d", path);
             // drawMarkers();
         });
-    }  
+    }
 
     function drawGraticule() {
         const graticule = d3.geoGraticule()
             .step([10, 10]);
 
-        g.selectAll("path")
+        svg.append("path")
             .datum(graticule)
-            .enter()
-            .append("gpath")
             .attr("class", "graticule")
             .attr("d", path)
             .style("fill", "transparent")

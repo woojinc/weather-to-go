@@ -18,7 +18,7 @@ export const renderSelectedCountry = (action, geojsonFeature, jsonCountryTempera
         let svg = d3.select("#selected-country")
         let g = svg.select('g');
         const bounds = path.bounds(geojsonFeature);
-        const scale = Math.min((bounds[1][0] - bounds[0][0]) / Math.PI, (bounds[1][1] - bounds[0][1]) / Math.PI);
+        // const scale = Math.min((bounds[1][0] - bounds[0][0]) / Math.PI, (bounds[1][1] - bounds[0][1]) / Math.PI);
 
         projection.fitSize([width, height], geojsonFeature);
 
