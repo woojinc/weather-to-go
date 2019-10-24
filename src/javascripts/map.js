@@ -119,7 +119,8 @@ export const renderMap = (month) => {
                     temperatureColor(selectedFeature.id, temperature));
             })
 
-        g.call(d3.drag()
+        g.call(
+            d3.drag()
                 .subject(function () {
                     const r = projection.rotate();
                     return {
@@ -132,7 +133,7 @@ export const renderMap = (month) => {
                     projection.rotate([d3.event.x * sens, -d3.event.y * sens, rotate[2]]);
                     svg.selectAll("path").attr("d", path);
                 }));
-                
+
         const clicked = (selectedFeature) => {
 
             let centroid, inverted, rotate, currentRotate, desiredRotate, r, currentScale, desiredScale, s;
@@ -156,9 +157,6 @@ export const renderMap = (month) => {
                 currentRotate = projection.rotate();
 
                 currentScale = projection.scale();
-                // projection.fitSize([width, height], selectedFeature);
-                console.log("current center", projection.center());
-                console.log("initial center", initialCenter);
                 desiredScale = projection.scale();
 
                 r = d3.interpolate(currentRotate, [-inverted[0], -inverted[1]]);
@@ -170,10 +168,7 @@ export const renderMap = (month) => {
                 .tween("rotate", function () {
                     return function (t) {
                         projection.rotate(r(t));
-                        // projection.scale(s(t));
-                        // projection.center([(center[0] / s(t)), 0]);
                         svg.selectAll("path").attr("d", path);
-                        console.log("Rotate!");
                     }
                 })
                 .on("end", function () {
@@ -211,7 +206,7 @@ export const renderMap = (month) => {
 
                 d3.json(`./data/tas-2016-${currentMonthString}.json`, function (error, temperature) {
                     if (error) throw error;
-                    g.selectAll("path")
+                    g.selectAll("path.land")
                         .style("fill", function (d) {
                             return temperatureColor(d.id, temperature);
                         })
@@ -276,10 +271,19 @@ export const renderMap = (month) => {
     }
 
     function drawOcean() {
-        g.append("path")
-            .datum({ type: "Sphere" })
-            .attr("class", "water")
-            .attr("d", path)
+        g.selectAll("path.ocean")
+            .data([{ type: "Sphere" }])
+            .enter()
+            .append("path")
+            .attr("class", "ocean")
+            // .attr("d", path)
+            // .style("fill", "transparent")
+            // .style("stroke", "rgba(204, 204, 204, 0.60)");
+        // g.append("path")
+        //     .datum({ type: "Sphere" })
+        //     // .attr("fill", "#0077be")
+        //     .attr("class", "water")
+        //     .attr("d", path)
     }
 
     function drawGraticule() {
