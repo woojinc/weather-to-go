@@ -47,17 +47,19 @@ export const renderMap = (month) => {
         .attr("width", width)
         .attr("height", height)
 
-    svg.append("path")
-        .datum({ type: "Sphere" })
-        .attr("class", "water")
-        .attr("d", path)
+    // svg.append("path")
+    //     .datum({ type: "Sphere" })
+    //     .attr("class", "water")
+    //     .attr("d", path)
+    // console.log("g", g);
 
-
-    drawGraticule();
 
     let g = svg.append('g');
 
-    
+    console.log("g", g);
+    console.log("g", g);
+
+
     let projection = d3.geoOrthographic()
         // .center(center);
         .translate([width / 2, height / 2])
@@ -69,7 +71,7 @@ export const renderMap = (month) => {
 
     let path = d3.geoPath().projection(projection);
 
-    
+
 
 
     queue()
@@ -95,10 +97,15 @@ export const renderMap = (month) => {
 
         const geojson = topojson.feature(topology, topology.objects.countries);
 
-        g.selectAll("path")
+
+        drawOcean();
+        drawGraticule();
+
+        g.selectAll("path.land")
             .data(geojson.features)
             .enter()
             .append("path")
+            .attr("class", "land")
             .attr("d", path)
             .style("fill", function (d) {
                 return temperatureColor(d.id, temperature);
@@ -111,7 +118,8 @@ export const renderMap = (month) => {
                     selectedFeature,
                     temperatureColor(selectedFeature.id, temperature));
             })
-            .call(d3.drag()
+
+        g.call(d3.drag()
                 .subject(function () {
                     const r = projection.rotate();
                     return {
@@ -123,19 +131,8 @@ export const renderMap = (month) => {
                     const rotate = projection.rotate();
                     projection.rotate([d3.event.x * sens, -d3.event.y * sens, rotate[2]]);
                     svg.selectAll("path").attr("d", path);
-                }));;
-
-        g.selectAll("text")
-            .data()
-
-        const onZoom = () => {
-            zoom.scaleExtent([zoom.scale() * 0.9, zoom.scale() * 1.1]);
-            scale = (d3.event.scale >= 1) ? d3.event.scale : 1;
-            projection.scale(300 * scale);
-            // moved = true;
-            dragging = true;
-        }
-        // 3D
+                }));
+                
         const clicked = (selectedFeature) => {
 
             let centroid, inverted, rotate, currentRotate, desiredRotate, r, currentScale, desiredScale, s;
@@ -231,21 +228,28 @@ export const renderMap = (month) => {
             });
 
         // zoom and pan
-        // const zoom = d3.zoom()
-        //     .on('zoom', () => {
-        //         g.style('stroke-width', `${1.5 / d3.event.transform.k}px`)
+        const zoom = d3.zoom()
+            .scaleExtent([1, Infinity])
+            .translateExtent([[0, 0], [width, height]])
+            .extent([[0, 0], [width, height]])
+            .on('zoom', () => {
+                g.style('stroke-width', `${1.5 / d3.event.transform.k}px`)
 
-        //         svg.attr('transform', function(d) {
-        //             return 'transform(' + d3.event.transform.k + ',0,0)';
-        //         })
-        //         console.log(d3.event.transform);
-        //         console.log({ k: d3.event.transform.k, x: 0, y: 0 });
-        //         // projection.translate(d3.event.transform.k).scale(d3.event.scale);
-        //         svg.selectAll("path").attr("d", path);
-                
-        //     })
+                g.attr('transform', function (d) {
+                    return 'translate('
+                        + -250 * (d3.event.transform.k - 1) + ','
+                        + -250 * (d3.event.transform.k - 1) + ')'
+                        + 'scale(' + d3.event.transform.k + ')';
+                })
+                // g.attr('transform', function(d) {
+                //     return 'scale(' + d3.event.transform.k + ')';
+                // })
 
-        // svg.call(zoom);
+                g.selectAll("path").attr("d", path);
+
+            })
+
+        g.call(zoom);
 
 
 
@@ -271,12 +275,21 @@ export const renderMap = (month) => {
         });
     }
 
+    function drawOcean() {
+        g.append("path")
+            .datum({ type: "Sphere" })
+            .attr("class", "water")
+            .attr("d", path)
+    }
+
     function drawGraticule() {
         const graticule = d3.geoGraticule()
             .step([10, 10]);
 
-        svg.append("path")
-            .datum(graticule)
+        g.selectAll("path.graticule")
+            .data([graticule()])
+            .enter()
+            .append("path")
             .attr("class", "graticule")
             .attr("d", path)
             .style("fill", "transparent")
