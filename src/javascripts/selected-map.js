@@ -18,7 +18,6 @@ export const renderSelectedCountry = (action, geojsonFeature, jsonCountryTempera
         let svg = d3.select("#selected-country")
         let g = svg.select('g');
         const bounds = path.bounds(geojsonFeature);
-        // const scale = Math.min((bounds[1][0] - bounds[0][0]) / Math.PI, (bounds[1][1] - bounds[0][1]) / Math.PI);
 
         projection.fitSize([width, height], geojsonFeature);
 
@@ -73,6 +72,9 @@ export const renderSelectedCountry = (action, geojsonFeature, jsonCountryTempera
             });
 
         const zoom = d3.zoom()
+            .scaleExtent([1, Infinity])
+            .translateExtent([[0, 0], [width, height]])
+            .extent([[0, 0], [width, height]])
             .on('zoom', () => {
                 g.style('stroke-width', `${1.5 / d3.event.transform.k}px`)
                 g.attr('transform', d3.event.transform)

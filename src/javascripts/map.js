@@ -47,32 +47,14 @@ export const renderMap = (month) => {
         .attr("width", width)
         .attr("height", height)
 
-    // svg.append("path")
-    //     .datum({ type: "Sphere" })
-    //     .attr("class", "water")
-    //     .attr("d", path)
-    // console.log("g", g);
-
-
     let g = svg.append('g');
 
-    console.log("g", g);
-    console.log("g", g);
-
-
     let projection = d3.geoOrthographic()
-        // .center(center);
-        .translate([width / 2, height / 2])
-    // .scale(200);
+        .translate([width / 2, height / 2]);
+
     const initialScale = projection.scale();
-    const initialCenter = projection.center();
-    console.log(initialScale);
-    console.log(initialCenter);
 
     let path = d3.geoPath().projection(projection);
-
-
-
 
     queue()
         .defer(d3.json, "./data/world-110m2.json")
@@ -176,11 +158,6 @@ export const renderMap = (month) => {
                         enableRotation(currentRotate[0])
                     }
                 });
-
-            const initialScale = projection.scale();
-
-            // Transition to the new transform.
-
         };
 
         enableRotation();
@@ -236,35 +213,17 @@ export const renderMap = (month) => {
                         + -250 * (d3.event.transform.k - 1) + ')'
                         + 'scale(' + d3.event.transform.k + ')';
                 })
-                // g.attr('transform', function(d) {
-                //     return 'scale(' + d3.event.transform.k + ')';
-                // })
 
                 g.selectAll("path").attr("d", path);
 
             })
 
         g.call(zoom);
-
-
-
-        // zoom = d3.zoom()
-        //     .center([width / 2, height / 2])
-        //     .on("zoom", onZoom)
-        //     .on("zoomend", function () { dragging = false; });
-
-        // drag = d3.drag()
-        //     .on('drag', onDrag)
-        //     .on('dragend', function () { dragging = false; })
-
-        // canvas.call(zoom);
-        // canvas.call(drag);
     }
 
     function enableRotation(startingAngle = 300) {
         timer = d3.timer(function (elapsed) {
             projection.rotate([startingAngle + globeConfig.speed * elapsed, globeConfig.verticalTilt, globeConfig.horizontalTilt]);
-            // projection.rotate([90,0,0]);
             svg.selectAll("path").attr("d", path);
             // drawMarkers();
         });
@@ -276,14 +235,6 @@ export const renderMap = (month) => {
             .enter()
             .append("path")
             .attr("class", "ocean")
-            // .attr("d", path)
-            // .style("fill", "transparent")
-            // .style("stroke", "rgba(204, 204, 204, 0.60)");
-        // g.append("path")
-        //     .datum({ type: "Sphere" })
-        //     // .attr("fill", "#0077be")
-        //     .attr("class", "water")
-        //     .attr("d", path)
     }
 
     function drawGraticule() {
