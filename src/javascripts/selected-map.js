@@ -1,4 +1,9 @@
-export const renderSelectedCountry = (action, geojsonFeature, jsonCountryTemperature) => {
+export const renderSelectedCountry = (
+    action,
+    geojsonFeature,
+    jsonCountryTemperature,
+    stations
+) => {
     const color = d3.scaleQuantize()
         .domain([45, 90])
         .range(["#3288BD", "#66C2A5", "#ABDDA4", "#E6F598",
@@ -12,6 +17,13 @@ export const renderSelectedCountry = (action, geojsonFeature, jsonCountryTempera
         .rotate([0, 0]);
 
     let path = d3.geoPath().projection(projection);
+
+    let canvas = d3.select("#selected-canvas").append("canvas")
+        .attr("width", width)
+        .attr("height", height)
+        .style('position', 'absolute')
+        .style('left', '0');
+    let context, stationData = [];
 
 
     if (action === "update") {
@@ -29,14 +41,14 @@ export const renderSelectedCountry = (action, geojsonFeature, jsonCountryTempera
             .attr("d", path)
             .style("fill", jsonCountryTemperature)
             .style("stroke", "#eee")
-            .attr("transform", function(d) {
+            .attr("transform", function (d) {
                 const centroid = path.centroid(d);
                 const x = width / 2 - centroid[0];
                 const y = height / 2 - centroid[1];
                 return "translate(" + x + "," + y + ")"
             });
 
-    } else if (action === "create")  {
+    } else if (action === "create") {
         let svg = d3.select("#selected-country")
             .append("svg")
             .attr("width", width)
@@ -56,7 +68,7 @@ export const renderSelectedCountry = (action, geojsonFeature, jsonCountryTempera
             .attr("width", 10)
             .attr("fill", d => color(100 - d * 10))
             .attr("stroke", "gray");
-    
+
         g.selectAll("path")
             .data([geojsonFeature])
             .enter()
@@ -81,5 +93,52 @@ export const renderSelectedCountry = (action, geojsonFeature, jsonCountryTempera
             })
 
         svg.call(zoom);
+
+    }
+    stationData = stations;
+    drawStations();
+    function drawStations() {
+        context = canvas.node().getContext('2d');
+        context.save();
+
+        context.setTransform([1, 0, 0, 1, 0, 0]);
+
+        // erase what is on the canvas currently
+        context.clearRect(0, 0, width, height);
+
+        context.restore();
+
+        const pRotate = projection.rotate();
+        for (let i in stationData) {
+            let station = stationData[i],
+
+                loc = station ? projection([station.LONGITUDE, station.LATITUDE]) : null;
+
+            if (loc) {
+                let longitude = Number(station.LONGITUDE) + 180,
+                    startLongitude = 360 - ((pRotate[0] + 270) % 360),
+                    endLongitude = (startLongitude + 180) % 360;
+                let circ = Math.PI * 2;
+                let quart = Math.PI / 2;
+
+                // mask 
+                if ((startLongitude < endLongitude &&
+                    longitude > startLongitude &&
+                    longitude < endLongitude) ||
+                    (startLongitude > endLongitude &&
+                        (longitude > startLongitude || longitude < endLongitude))) {
+                    context.strokeStyle = 'rgba(144, 253, 222, ' + 0.9 + ')';
+                    // context.strokeStyle = 'rgba(0,0,0,1)';
+                    let ending = projection([station.LONGITUDE, station.LATITUDE]);
+                    // context.lineWidth = 2
+                    context.beginPath();
+                    context.arc(ending[0], ending[1], 2, 0, Math.PI * 2);
+                    context.stroke();
+                    context.fillStyle = color(station.TAVG * (9 / 5) + 32);
+                    context.fill()
+                }
+            }
+        }
+
     }
 }
