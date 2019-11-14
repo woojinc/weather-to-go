@@ -4,5 +4,5 @@ import { renderSlider } from "./slider";
 import axios from "axios";
 
 window.addEventListener("DOMContentLoaded", () => {
-    renderMap(10);
+    renderMap(11);
 });

@@ -96,31 +96,31 @@ export const renderSelectedCountry = (
         // projection.center([width/2, height/2]);
 
         const data = d3.range(10);
-        const rects = svg.selectAll(".rects")
-            .data(data)
-            .enter()
-            .append("rect")
-            .attr("x", 10)
-            .attr("height", 10)
-            .attr("y", (d, i) => 10 + i * 9)
-            .attr("width", 10)
-            .attr("fill", d => color(100 - d * 10))
-            .attr("stroke", "gray");
+        // const rects = svg.selectAll(".rects")
+        //     .data(data)
+        //     .enter()
+        //     .append("rect")
+        //     .attr("x", 10)
+        //     .attr("height", 10)
+        //     .attr("y", (d, i) => 10 + i * 9)
+        //     .attr("width", 10)
+        //     .attr("fill", d => color(100 - d * 10))
+        //     .attr("stroke", "gray");
 
-        svg.selectAll("text")
-            .data(data)
-            .enter()
-            .append("text")
-            .html(d => {
-                return `${(100 - d * 10)}&#176;F`;
-            })
-            .attr("font-size", "0.32em")
-            .attr("x", 23)
-            .attr("height", 20)
-            .attr("y", (d, i) => 20 + i * 9)
-            .attr("width", 10)
-            .attr("fill", d => color(100 - d * 10))
-        // .attr("stroke", "gray");
+        // svg.selectAll("text")
+        //     .data(data)
+        //     .enter()
+        //     .append("text")
+        //     .html(d => {
+        //         return `${(100 - d * 10)}&#176;F`;
+        //     })
+        //     .attr("font-size", "0.32em")
+        //     .attr("x", 23)
+        //     .attr("height", 20)
+        //     .attr("y", (d, i) => 20 + i * 9)
+        //     .attr("width", 10)
+        //     .attr("fill", d => color(100 - d * 10))
+        // // .attr("stroke", "gray");
 
         g.selectAll("path")
             .data([geojsonFeature])
@@ -205,13 +205,14 @@ export const renderSelectedCountry = (
                         d.NAME + "<br/>" +
                         "Average Temp: " + (d.TAVG * (9 / 5) + 32).toFixed(1) + "&#176;F <br />" +
                         "</p>"
-                    );
-                // .text(`${d.NAME}`);
+                    )
+                    .style("top", (d3.event.pageY) + "px")
+                    .style("left", (d3.event.pageX + 10) + "px");
             })
                 .on("mousemove", function (d) {
-                    tooltip.style("opacity", .9)
-                        .style("top", (d3.event.pageY) + "px")
-                        .style("left", (d3.event.pageX + 10) + "px")
+                        tooltip.style("opacity", .9)
+                            .style("top", (d3.event.pageY) + "px")
+                            .style("left", (d3.event.pageX + 10) + "px");
                     // .text(d.NAME);
                 })
                 .on("mouseout", function (d, i) {

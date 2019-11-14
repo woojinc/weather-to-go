@@ -85,9 +85,13 @@ text.temp-shadow {
     justify-content: center;
     padding: 25px 0;
 
-    i {
+    i, img {
         font-size: 1.5em;
         margin: 20px;
+    }
+    
+    img {
+        height: 48px;
     }
 }
 
@@ -105,4 +109,42 @@ a {
 a:visited {
     color: inherit;
     text-decoration: none;
+}
+
+.month-slider-container {
+    display: flex;
+    width: 30%;
+    min-width: 500px;
+}
+.month-slider-title {
+    right: 0;
+    font-size: 0.8em;
+    width: 250px;
+}
+
+#how-stuff-works {
+    width: 250px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+    
+    h4 {
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 0.5em;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        p {
+            font-size: 0.4em;
+        }
+    }
+
+
 }

@@ -241,7 +241,7 @@ export const renderMap = (month) => {
 
         enableRotation();
 
-        renderSlider();
+        renderSlider(month);
         renderSelectedCountry(
             "create",
             geojson.features[5],

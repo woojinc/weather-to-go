@@ -21,11 +21,15 @@
 <body>
     <div id="app"></div>
     <h1>Weather to go</h1>
-    <div id="slider"></div>
+    <div class="month-slider-container">
+        <div class="month-slider-title">
+            Month Slider:
+        </div>
+        <div id="slider"></div>
+    </div>
     <div class="tooltip"></div>
     <div id="content">
         <div id="map">
-            <!-- <div id="visual-map"></div> -->
             <div id="canvas"></div>
             <div id="functional-map"></div>
         </div>
@@ -34,6 +38,28 @@
             <div id="selected-functional-map"></div>
             <div id="selected-country-name">
             </div>
+        </div>
+        <div id="how-stuff-works">
+            <h4>
+                Let's go places!
+            </h4>
+            <p>
+                1. Using the month slider, pick a month that you want to travel.
+            </p>
+            <p>
+                2. Click a country with a desired monthly average temperature.
+            </p>
+            <p>
+                3. Hover over location markers on the selected country to see the specific weather station data.
+            </p>
+            <p>
+                4. Use the month slider to see how the selected country's average temperature changes over the year.
+            </p>
+            <footer>
+                <p>
+                    All data is from <a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/902061-climate-data-api">The World Bank Climate Data API</a> and <a href="https://www.ncdc.noaa.gov/cdo-web/webservices/v2">NOAA's Climate Data Online</a>.    
+                </p>
+            </footer>
         </div>
     </div>
 
@@ -46,7 +72,11 @@
                 <i class="fab fa-github-square"></i>
             </a>
             <a href="https://woojinchae.com/" target="_blank">
-                <i class="fas fa-chalkboard"></i>
+                <!-- <i class="fas fa-chalkboard"></i> -->
+                <img class="wj-logo" src="wj.png" alt="">
+            </a>
+            <a href="https://angel.co/woojin-chae" target="_blank">
+                <i class="fab fa-angellist"></i>
             </a>
             <a href="https://www.linkedin.com/in/woojin-chae/" target="_blank">
                 <i class="fab fa-linkedin"></i>

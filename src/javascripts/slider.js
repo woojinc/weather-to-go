@@ -16,13 +16,13 @@ export const numMonthToName = {
 
 
 
-export const renderSlider = () => {
+export const renderSlider = (month) => {
     const slider = document.getElementById("slider");
     slider.setAttribute("id", "slider-container");
 
     const sliderLabel = document.createElement("div");
     sliderLabel.setAttribute("id", "slider-current-month");
-    sliderLabel.innerHTML = numMonthToName[10];
+    sliderLabel.innerHTML = numMonthToName[month];
 
     const sliderSetting = document.createElement("input");
     sliderSetting.setAttribute("id", "month-slider");
